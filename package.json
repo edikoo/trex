@@ -1,6 +1,6 @@
 {
   "name": "@edikoo/trex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A beautiful, informative tree command — icons, git status, language stats, live watch, and more",
   "type": "module",
   "bin": { "trex": "./index.js" },
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/edikoo/trex",
   "bugs": "https://github.com/edikoo/trex/issues",
-  "files": ["index.js"],
+  "files": ["index.js", "README.md"],
   "scripts": {
     "build:linux-x64":   "bun build --compile --target=bun-linux-x64-modern   index.js --outfile dist/trex-linux-x64",
     "build:linux-arm64": "bun build --compile --target=bun-linux-arm64         index.js --outfile dist/trex-linux-arm64",
