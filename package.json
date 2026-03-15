@@ -1,0 +1,28 @@
+{
+  "name": "@edikoo/trex",
+  "version": "1.0.0",
+  "description": "A beautiful, informative tree command — icons, git status, language stats, live watch, and more",
+  "type": "module",
+  "bin": { "trex": "./index.js" },
+  "engines": { "node": ">=18.3.0" },
+  "license": "MIT",
+  "keywords": [
+    "tree", "cli", "files", "directory", "git", "icons", "colorful",
+    "du", "watch", "diff", "todo", "lang-stats"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edikoo/trex.git"
+  },
+  "homepage": "https://github.com/edikoo/trex",
+  "bugs": "https://github.com/edikoo/trex/issues",
+  "files": ["index.js"],
+  "scripts": {
+    "build:linux-x64":   "bun build --compile --target=bun-linux-x64-modern   index.js --outfile dist/trex-linux-x64",
+    "build:linux-arm64": "bun build --compile --target=bun-linux-arm64         index.js --outfile dist/trex-linux-arm64",
+    "build:macos-x64":   "bun build --compile --target=bun-darwin-x64          index.js --outfile dist/trex-macos-x64",
+    "build:macos-arm64": "bun build --compile --target=bun-darwin-arm64        index.js --outfile dist/trex-macos-arm64",
+    "build:all": "mkdir -p dist && npm run build:linux-x64 && npm run build:linux-arm64 && npm run build:macos-x64 && npm run build:macos-arm64",
+    "release": "npm run build:all && node scripts/release.js"
+  }
+}
